@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SK R GYM | Fitness Store</title>
+  <meta name="description" content="SK R Gym fitness equipment, accessories and gym membership plans.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">SK R <span>GYM</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" id="cart-toggle">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">TRAIN HARD. STAY STRONG.</p>
+        <h1>BUILD YOUR<br><span>BEST BODY</span></h1>
+        <p>Premium gym equipment and fitness essentials
+          for your strength journey.</p>
+        <a href="#products" class="btn">SHOP NOW ↗</a>
+        <a href="#membership" class="btn btn-outline">JOIN OUR GYM</a>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <div class="hero-icon">🏋️</div>
+        <p>NO EXCUSES. JUST RESULTS.</p>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div>💪 <span>QUALITY EQUIPMENT</span></div>
+      <div>🚚 <span>ORDER ON WHATSAPP</span></div>
+      <div>🔥 <span>REACH YOUR GOALS</span></div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>GYM <span>PRODUCTS</span></h2>
+        </div>
+        <p>Gear up. Show up. Get stronger.</p>
+      </div>
+
+      <div class="shop-tools">
+        <input id="search" type="search"
+          placeholder="Search dumbbells, gloves..." aria-label="Search products">
+
+        <select id="category" aria-label="Filter products">
+          <option value="All">All Products</option>
+          <option value="Weights">Weights</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Equipment">Equipment</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+      <p id="no-results" class="empty-message" hidden>
+        No products found. Try another search.
+      </p>
+    </section>
+
+    <section class="membership section" id="membership">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR FITNESS JOURNEY</p>
+          <h2>GYM <span>MEMBERSHIP</span></h2>
+        </div>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan">
+          <h3>MONTHLY</h3>
+          <p class="plan-price">Rs. 3,000 <small>/ month</small></p>
+          <ul>
+            <li>Gym access</li>
+            <li>Basic workout guidance</li>
+            <li>Fitness equipment</li>
+          </ul>
+          <button class="btn plan-button" data-plan="Monthly">
+            Choose Plan
+          </button>
+        </article>
+
+        <article class="plan featured">
+          <span class="popular">POPULAR</span>
+          <h3>3 MONTHS</h3>
+          <p class="plan-price">Rs. 8,000 <small>/ 3 months</small></p>
+          <ul>
+            <li>Gym access</li>
+            <li>Workout guidance</li>
+            <li>Progress tracking</li>
+          </ul>
+          <button class="btn plan-button" data-plan="3 Months">
+            Choose Plan
+          </button>
+        </article>
+
+        <article class="plan">
+          <h3>YEARLY</h3>
+          <p class="plan-price">Rs. 25,000 <small>/ year</small></p>
+          <ul>
+            <li>Gym access</li>
+            <li>Workout guidance</li>
+            <li>Long-term fitness plan</li>
+          </ul>
+          <button class="btn plan-button" data-plan="Yearly">
+            Choose Plan
+          </button>
+        </article>
+      </div>
+      <p class="note">
+        Membership prices are sample prices. Update them to your actual gym fees.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <p class="eyebrow">LET'S GET STRONGER</p>
+      <h2>READY TO <span>START?</span></h2>
+      <p>Questions about products or membership? Contact us on WhatsApp.</p>
+      <button class="btn" id="contact-whatsapp">CONTACT ON WHATSAPP ↗</button>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">SK R <span>GYM</span></a>
+    <p>Train hard. Stay strong. © <span id="year"></span> SK R Gym</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart"
+    aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="cart-close" class="close-button" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <h3>Total: <span id="cart-total">Rs. 0</span></h3>
+      <button class="btn" id="checkout">ORDER ON WHATSAPP</button>
+      <button class="clear-button" id="clear-cart">Clear cart</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
